@@ -1,4 +1,6 @@
-console.log = (function() {
+if(window.REMOTE_STREAM_USER) {
+
+  console.log = (function() {
     var log = console.log;
 
     return function(msg) {
@@ -10,11 +12,12 @@ console.log = (function() {
                alert("Success: " + r.responseText);
          };
          data = {
-           "device": "SIDANLA",
+           "device": window.REMOTE_STREAM_USER,
            "log": msg
          };
          r.send(JSON.stringify(data));
          log.call(console, msg);
     };
-})();
+  })();
 
+}
