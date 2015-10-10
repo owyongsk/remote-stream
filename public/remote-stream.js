@@ -1,7 +1,8 @@
 (function(){
-  oldLog = console.log;
+  oldConsole = window.console;
   window.console = {};
   window.console.log = function(log) {
+    oldConsole.log(log);
     var r = new XMLHttpRequest();
     r.open("POST", "http://localhost:3000/api/logs", true);
     r.setRequestHeader('Content-Type', 'application/json');
@@ -14,6 +15,5 @@
       "log": log
     };
     r.send(JSON.stringify(data));
-    oldLog.call(this, log);
   };
 })();
