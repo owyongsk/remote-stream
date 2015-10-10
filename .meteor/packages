@@ -22,3 +22,4 @@ underscore
 iron:router
 nimble:restivus
 sacha:spin
+matb33:collection-hooks
