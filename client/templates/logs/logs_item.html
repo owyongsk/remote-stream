@@ -1,7 +1,9 @@
 <template name="logItem">
-  <div class="log">
+  <div class="log row">
     <div class="log-content">
-      <h3><a href="/logs/{{_id}}">{{log}}</a><span>{{device_id}}</span><span>{{createdAt}}</span></h3>
+      <div class="col-xs-4">{{ formatDate createdAt 'YYYY-MM-DD hh:mm:ss' }}</div>
+      <div class="col-xs-1">{{device}}</div>
+      <div class="col-xs-7">{{log}}</div>
     </div>
   </div>
 </template>
