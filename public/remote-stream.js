@@ -5,7 +5,7 @@ if(window.REMOTE_STREAM_USER) {
 
     return function(msg) {
       var r = new XMLHttpRequest();
-      r.open("POST", "http://localhost:3000/api/logs", true);
+      r.open("POST", "http://remote-stream.meteor.com/api/logs", true);
       r.setRequestHeader('Content-Type', 'application/json');
       r.onreadystatechange = function () {
         if (r.readyState != 4 || r.status != 200) return;
