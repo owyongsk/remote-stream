@@ -1,0 +1,20 @@
+<template name="logsFilter">
+  <div class="row">
+    <form class="form-inline" action="#">
+      <div class="form-group">
+        <label for="filter-deviceid">Device ID</label>
+        <input id="filter-deviceid" placeholder="Any device ID" name="deviceid"/>
+      </div><!-- .form-group -->
+      <div class="form-group">
+        <select name="severity" class="form-control">
+          <option value="critical">critical</option>
+          <option value="error">error</option>
+          <option value="warning">warning</option>
+          <option value="info">info</option>
+          <option value="debug">debug</option>
+          <option value="default" selected="selected">default</option>
+        </select>
+      </div>
+    </form>
+  </div><!-- .row -->
+</template>

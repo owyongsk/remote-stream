@@ -1,4 +1,7 @@
 <template name="logsList">
+  <div class="logs-filter">
+    {{> logsFilter}}
+  </div><!-- .logs-filter-->
   <div class="logs">
     {{#each logs}}
       {{> logItem}}
